@@ -4,6 +4,7 @@ LLM-based Agent for Alzheimer's research tasks.
 
 import json
 import os
+import random
 from typing import Any, Dict, List, Tuple, Optional
 from .base_agent import BaseAgent
 
@@ -122,7 +123,6 @@ You should:
         
         # Random selection for demonstration to simulate varied LLM responses
         # In production, this would use actual LLM reasoning
-        import random
         selected_action = random.choice(available_actions) if available_actions else 'analyze'
         
         return {
