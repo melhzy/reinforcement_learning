@@ -1,0 +1,20 @@
+# RL Framework for LLM + Alzheimer's Disease Research
+# 
+# This framework uses only Python standard library for core functionality.
+# Optional dependencies for extended features:
+
+# For actual LLM integration (optional)
+# openai>=1.0.0
+# anthropic>=0.5.0
+
+# For data visualization (optional)
+# matplotlib>=3.5.0
+# seaborn>=0.12.0
+
+# For advanced data processing (optional)
+# numpy>=1.21.0
+# pandas>=1.3.0
+
+# For testing (development)
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
