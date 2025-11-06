@@ -276,13 +276,20 @@ class AlzheimersResearchEnv(BaseEnvironment):
         return contexts.get(action_type, "Research action completed")
     
     def render(self) -> None:
-        """Render the current state of the environment."""
+        """
+        Render the current state of the environment.
+        
+        WARNING: This method displays patient information for debugging/demonstration.
+        For production use with real patient data, ensure proper data anonymization
+        and comply with HIPAA/GDPR regulations. This framework uses synthetic data only.
+        """
         print("\n" + "="*60)
         print(f"Alzheimer's Research Environment - Step {self.current_step}")
         print("="*60)
         
         if self.current_patient:
-            print(f"\nPatient ID: {self.current_patient['patient_id']}")
+            # Note: Patient ID is synthetic - never log real patient identifiers
+            print(f"\nPatient ID: {self.current_patient['patient_id']} (synthetic)")
             print(f"Age: {self.current_patient['age']}")
             print(f"Disease Stage: {self.current_patient['disease_stage']}")
             print(f"\nBiomarkers:")

@@ -275,13 +275,22 @@ Contributions are welcome! Areas for improvement:
 
 ## ⚠️ Important Notes
 
-**Disclaimer**: This framework is designed for research purposes. The simulated patient data and recommendations should not be used for actual medical decision-making without proper validation and regulatory approval.
+**Disclaimer**: This framework is designed for research purposes only. The simulated patient data and recommendations should not be used for actual medical decision-making without proper validation and regulatory approval.
+
+**Data Privacy & Security**: 
+- This framework is designed to work with **synthetic data only**
+- Never use real patient identifiable information (PII) without proper anonymization
+- Comply with HIPAA, GDPR, and other applicable data protection regulations
+- All patient IDs and medical data in examples are synthetic for demonstration
+- When logging or displaying data, ensure it's anonymized and compliant with regulations
 
 **Ethics**: When using this framework:
 - Ensure patient data privacy and anonymization
-- Follow medical research ethics guidelines
-- Validate all AI-generated recommendations with human experts
+- Follow medical research ethics guidelines and institutional review board (IRB) requirements
+- Validate all AI-generated recommendations with human medical experts
 - Consider safety implications of automated medical decisions
+- Obtain informed consent for any research involving human subjects
+- Be transparent about AI involvement in research processes
 
 ## 📝 License
 

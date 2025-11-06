@@ -49,9 +49,11 @@ def main():
         if risk_score > 0.7:
             high_risk_patients.append((patient['patient_id'], risk_score))
     
+    # Note: Patient IDs are synthetic for demonstration purposes
+    # In production, never log real patient identifiable information
     print(f"✓ Identified {len(high_risk_patients)} high-risk patients")
     if high_risk_patients:
-        print("  Top 3 high-risk patients:")
+        print("  Top 3 high-risk patients (synthetic IDs only):")
         for patient_id, risk in sorted(high_risk_patients, key=lambda x: x[1], reverse=True)[:3]:
             print(f"    - {patient_id}: {risk:.2f}")
     
