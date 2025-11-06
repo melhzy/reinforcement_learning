@@ -3,7 +3,6 @@ Medical Reward Function for Alzheimer's research.
 """
 
 from typing import Any, Dict, List
-import math
 
 
 class MedicalRewardFunction:

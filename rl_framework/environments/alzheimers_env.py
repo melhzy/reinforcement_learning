@@ -7,6 +7,20 @@ from typing import Any, Dict, List, Tuple
 from .base_environment import BaseEnvironment
 
 
+# Disease stage constants
+DISEASE_STAGE_HEALTHY = "healthy"
+DISEASE_STAGE_MILD = "mild"
+DISEASE_STAGE_MODERATE = "moderate"
+DISEASE_STAGE_SEVERE = "severe"
+
+DEFAULT_DISEASE_STAGES = [
+    DISEASE_STAGE_HEALTHY,
+    DISEASE_STAGE_MILD,
+    DISEASE_STAGE_MODERATE,
+    DISEASE_STAGE_SEVERE
+]
+
+
 class AlzheimersResearchEnv(BaseEnvironment):
     """
     Environment for Alzheimer's disease research tasks.
@@ -32,8 +46,7 @@ class AlzheimersResearchEnv(BaseEnvironment):
         super().__init__(config)
         
         self.num_patients = config.get("num_patients", 100)
-        self.disease_stages = config.get("disease_stages", 
-                                        ["healthy", "mild", "moderate", "severe"])
+        self.disease_stages = config.get("disease_stages", DEFAULT_DISEASE_STAGES)
         self.available_biomarkers = config.get("available_biomarkers",
                                               ["amyloid_beta", "tau_protein", "apoe4", 
                                                "brain_volume", "cognitive_score"])

@@ -120,14 +120,15 @@ You should:
                 'confidence': 0.5
             }
         
-        # Simple heuristic selection for demonstration
+        # Random selection for demonstration to simulate varied LLM responses
         # In production, this would use actual LLM reasoning
-        selected_action = available_actions[0] if available_actions else 'analyze'
+        import random
+        selected_action = random.choice(available_actions) if available_actions else 'analyze'
         
         return {
             'action_type': selected_action,
             'reasoning': f'Selected {selected_action} based on current context',
-            'confidence': 0.7,
+            'confidence': random.uniform(0.6, 0.9),
             'parameters': self._get_action_parameters(selected_action, observation)
         }
     
